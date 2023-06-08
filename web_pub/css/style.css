@@ -156,12 +156,6 @@
 .notice_hover2 a span:hover em {visibility: visible;}
 .notice_hover2 a strong {display: inline-block; padding-top: 3px; font-size: 12px;}
 
-/* 콘텐츠 요소를 안 보이게 하는 방법 
-1. display: none -- display: block; 영역 사라짐
-2. visibility: hidden; -- visibility: visible; 영역 유지
-3. opacity: 0; -- opacity: 1; 영역 유지
-4. width:0; height:0; overflow: hidden; 
-*/
 /* 탭 메뉴 */
 .tab_menu {position: relative; border: 1px solid #ccc; height: 105px; padding: 8px;}
 .tab_menu ul {overflow: hidden; border-bottom: 1px solid #ccc;}
@@ -182,3 +176,21 @@
 .notice4 li a {float: left; width: 60%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
 .notice4 li span {float: right; width: 40%; text-align: right;}
 .notice4 a.more {position: absolute; right: 10px; top: 8px;}
+
+/* 갤러리 */
+.gallery {position: relative; border: 1px solid #ccc; height: 254px; overflow: hidden;}
+.gallery h4 {font-size: 14px; color: #0093bc; border-bottom: 1px solid #ccc; padding: 10px 0 8px 11px; font-weight: bold;}
+.gallery .gallery_btn {position: absolute; right: 5px; top: 7px;}
+.gallery .gallery_btn ul {overflow: hidden;}
+.gallery .gallery_btn li {float: left; margin: 1px 2px;}
+.gallery .gallery_btn li a {display: block; width: 23px; height: 23px; background: url(../img/icon.png) no-repeat;}
+.gallery .gallery_btn li.gb_icon1 a {background-position: -150px -120px;}
+.gallery .gallery_btn li.gb_icon2 a {background-position: -150px -143px;}
+.gallery .gallery_btn li.gb_icon3 a {background-position: -150px -166px;}
+.gallery .gallery_btn li.gb_icon4 a {background-position: -150px -189px;}
+.gallery .gallery_btn li.gb_icon1 a:hover {background-position: -173px -120px;}
+.gallery .gallery_btn li.gb_icon2 a:hover {background-position: -173px -143px;}
+.gallery .gallery_btn li.gb_icon3 a:hover {background-position: -173px -166px;}
+.gallery .gallery_btn li.gb_icon4 a:hover {background-position: -173px -189px;}
+.gallery .gallery_img {}
+.gallery .gallery_img img {width: 100%;}
