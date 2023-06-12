@@ -199,6 +199,7 @@
 .lc_header {overflow: hidden; font-size: 12px; height: 30px;}
 .lc_header .lh_check {float: left; padding-right: 15px;}
 .lc_header .lh_check .input_check {vertical-align: -2px;}
+.lc_header .lh_ip {float: left;}
 .lc_header .lh_ip em {text-decoration: underline; color: #0093bd;}
 .lc_content {position: relative;}
 .lc_content .lc_btn {position: absolute; right: 0; top: 0; width: 62px; height: 47px; background: #fff; border: 1px solid #bebebe;}
@@ -206,3 +207,11 @@
 .lc_footer {margin-top: 5px;}
 .lc_footer li {display: inline;}
 .lc_footer li a {font-style: 12px;}
+
+/* 팝업 */
+.popup {margin-top: 15px;}
+.popup h4 {font-style: 14px; color: #0093bd; padding-bottom: 4px; font-weight: 700;}
+.popup ul {overflow: hidden;}
+.popup li {float: left; width: 93px; margin-right: 5px;}
+.popup li:last-child {margin-right: 0;}
+.popup li img {width: 100%;}
