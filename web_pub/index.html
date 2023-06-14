@@ -354,21 +354,30 @@
               <div class="gallery">
                 <h4>포트폴리오</h4>
                 <div class="gallery_btn">
-                  <ul>
+                  <!-- <ul>
                     <li class="gb_icon1"><a href="#"><span class="ir_pm">시작</span></a></li>
                     <li class="gb_icon2"><a href="#"><span class="ir_pm">정지</span></a></li>
                     <li class="gb_icon3"><a href="#"><span class="ir_pm">이전이미지</span></a></li>
                     <li class="gb_icon4"><a href="#"><span class="ir_pm">다음이미지</span></a></li>
-                  </ul>
+                  </ul> -->
+                  <button class="gb_icon1 paly"><span class="ir_pm">시작</span></button>
+                  <button class="gb_icon2 pause"><span class="ir_pm">정지</span></button>
+                  <button class="gb_icon3 prev"><span class="ir_pm">이전이미지</span></button>
+                  <button class="gb_icon4 next"><span class="ir_pm">다음이미지</span></button>
                 </div>
                 <div class="gallery_img">
-                  <ul>
+                  <!-- <ul>
                     <li><a href="#"><img src="img/gallery01.jpg" alt="갤러리1"></a></li>
                     <li><a href="#"><img src="img/gallery02.jpg" alt="갤러리1"></a></li>
                     <li><a href="#"><img src="img/gallery03.jpg" alt="갤러리1"></a></li>
                     <li><a href="#"><img src="img/gallery04.jpg" alt="갤러리1"></a></li>
                     <li><a href="#"><img src="img/gallery05.jpg" alt="갤러리1"></a></li>
-                  </ul>
+                  </ul> -->
+                  <div><a href="#"><img src="img/gallery01.jpg" alt="갤러리1"></a></div>
+                  <div><a href="#"><img src="img/gallery02.jpg" alt="갤러리1"></a></div>
+                  <div><a href="#"><img src="img/gallery03.jpg" alt="갤러리1"></a></div>
+                  <div><a href="#"><img src="img/gallery04.jpg" alt="갤러리1"></a></div>
+                  <div><a href="#"><img src="img/gallery05.jpg" alt="갤러리1"></a></div>
                 </div>
               </div>
             </div><!-- //col6 -->
@@ -415,6 +424,39 @@
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
   <script>
+    //갤러리 
+    $('.gallery_img').slick({
+      arrows: false,
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      fade: true
+    })
+    $('.paly').click(function(e) {
+      $('.gallery_img').slick("slickPlay")
+    })
+    $('.pause').click(function(e) {
+      $('.gallery_img').slick("slickPause")
+    })
+    $('.prev').click(function(e) {
+      $('.gallery_img').slick("slickPrev")
+    })
+    $('.next').click(function(e) {
+      $('.gallery_img').slick("slickNext")
+    })
+
+    //탭 메뉴
+    const $tab_list = $('.tab_menu');
+
+    $tab_list.find('ul ul').hide();
+    $tab_list.find('li.active > ul').show();
+
+    function tabMemu(e) {
+      e.preventDefault();
+      $(this).next('ul').show().parent('li').addClass('active').siblings('li').removeClass('active').find('ul').hide();
+    }
+    $tab_list.find('ul>li>a').click(tabMemu).focus(tabMemu);
+
     //배너
     $('.ban').slick({
       infinite: true,
@@ -424,6 +466,7 @@
       autoplaySpeed: 3000,
       dots: true
     })
+
     // 전체메뉴
     $(".tit .btn").click(function(e) {
       e.preventDefault();
